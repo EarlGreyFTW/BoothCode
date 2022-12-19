@@ -1,4 +1,4 @@
-<?php include "initiate.php"; ?>
+<?php include "initiate.php";;?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +19,7 @@
 		<th style="width: 46%">
 			<div id="about-you">
 				<h3>About You</h3>
-				<label>Full Name:
+				<label>Name*:
 					<input type="text" class="text-box" name="FullName" required>
 				</label>
 				<br><br>
@@ -31,6 +31,7 @@
 					<input type="tel" class="text-box" name="PhoneNumber">
 				</label>
 				<br><br>
+                <p><em>* required</em></p>
 			</div>
 		</th>
 		<th style="width: 8%"></th>
@@ -51,13 +52,13 @@
 </table>
 <?php
 if(isset($_POST["submit"])){
+    echo "done";
 	$_SESSION["NAME"] = $_POST["FullName"];
 	$_SESSION["NUMBER"] = $_POST["PhoneNumber"];
 	$_SESSION["EMAIL"] = $_POST["Email"];
 	$_SESSION["DESCRIPTION"] = $_POST["Summary"];
 	$_SESSION["ADDITIONALNOTES"] = $_POST["AdditionalInfo"];
-	header("Location: Record.php", true, 301);
-	exit();
+	header("location:Record.php", true, 301);
 } ?>
 <div id="bottom-menu">
 	<div id="next-button">
@@ -75,3 +76,5 @@ if(isset($_POST["submit"])){
 <footer>
 </footer>
 </html>
+<!-- Made using MediaRecorder API and BootstrapCDN /-->
+<!-- Developed for The National Museum of Computing by Taliesin Turner (https://earlgreyftw.carrd.co/) /-->
