@@ -24,13 +24,12 @@
     </div>
     <?php
     if(isset($_POST["submit"])){
-        $_SESSION["MESSAGE"] = $_POST["Message"];
         $name = $_SESSION["NAME"];
         $number = $_SESSION["NUMBER"];
         $email = $_SESSION["EMAIL"];
         $description = $_SESSION["DESCRIPTION"];
         $addnotes = $_SESSION["ADDITIONALNOTES"];
-        $message = $_SESSION["MESSAGE"];
+        $message = $_POST["Message"];
         $upload = mysqli_query($connect, "INSERT INTO details (NAME, NUMBER, EMAIL, DESCRIPTION, ADDITIONALNOTES, MESSAGE) VALUES ('$name', '$number', '$email', '$description', '$addnotes', '$message')");
     } ?>
     <div id="bottom-menu">

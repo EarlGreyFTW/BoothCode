@@ -35,17 +35,6 @@ $_SESSION["MESSAGE"] = "";
 </div>
 </body>
 <footer>
-	<div id="bottom-menu">
-		<div id="next-button">
-			<button id="next"><b><a class="link" href="PersonalDetails.php">Next</a></b></button>
-		</div>
-		<div id="back-button">
-			<button id="back" disabled><b><a class="link">Back</a></b></button>
-		</div>
-		<div id="cancel-button">
-			<button id="cancel"><b><a class="link" href="index.php">Cancel</a></b></button>
-		</div>
-	</div>
 </footer>
 </html>
 <!-- Made using MediaRecorder API and BootstrapCDN /-->
