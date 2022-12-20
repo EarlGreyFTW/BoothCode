@@ -55,11 +55,13 @@ li :not(.exc):hover {
   border-radius: 12px;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+ul:hover{
+	background-color: #ffffff;
+}
 #input-box{
 	width: 40%;
 	border: black groove 3px;
-	position: relative;
-	left: 5%;
+	float: left;
 	height: 67%;
 	border-radius: 12px;
 	background-image: linear-gradient(to bottom left,#168b2e, #d6f5d6);
@@ -67,14 +69,12 @@ li :not(.exc):hover {
 #instructions{
 	text-align: left;
 	position: relative;
-	width: 50%;
 	left: 25%;
+	width: 50%;
 }
 #myVidPlayer{
 	border: #168b2e solid 5px;
-	position: absolute;
-	right: 5%;
-	top: 10%;
+	float: right;
 	border-radius: 12px;
 }
 #bottom-menu{
@@ -90,7 +90,14 @@ li :not(.exc):hover {
 	color: red;
 	font-size: 0;
 }
+#h-stop{
+	color: red;
+	font-size: 0;
+}
 #h-recording:target{
+	font-size: 15px;
+}
+#h-stop:target{
 	font-size: 15px;
 }
 .link{
@@ -168,4 +175,7 @@ li :not(.exc):hover {
 #final{
 	width: 90%;
 
+}
+#ul{
+	list-style-type: none;
 }

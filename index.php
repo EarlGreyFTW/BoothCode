@@ -40,7 +40,7 @@ $_SESSION["MESSAGE"] = "";
 			<button id="next"><b><a class="link" href="PersonalDetails.php">Next</a></b></button>
 		</div>
 		<div id="back-button">
-			<button id="back" disabled="disabled" ><b><a class="link">Back</a></b></button>
+			<button id="back" disabled><b><a class="link">Back</a></b></button>
 		</div>
 		<div id="cancel-button">
 			<button id="cancel"><b><a class="link" href="index.php">Cancel</a></b></button>

@@ -1,4 +1,6 @@
-<?php include "initiate.php";;?>
+<?php include "initiate.php";
+echo "Name: ".$_SESSION["NAME"];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,19 +52,9 @@
 		</th>
 	</tr>
 </table>
-<?php
-if(isset($_POST["submit"])){
-    echo "done";
-	$_SESSION["NAME"] = $_POST["FullName"];
-	$_SESSION["NUMBER"] = $_POST["PhoneNumber"];
-	$_SESSION["EMAIL"] = $_POST["Email"];
-	$_SESSION["DESCRIPTION"] = $_POST["Summary"];
-	$_SESSION["ADDITIONALNOTES"] = $_POST["AdditionalInfo"];
-	header("location:Record.php", true, 301);
-} ?>
 <div id="bottom-menu">
 	<div id="next-button">
-		<button id="next" type="submit" value="submit"><b>Next</b></button>
+		<button id="next" type="submit" value="submit" ><b>Next</b></button>
 	</div>
 	<div id="back-button">
 		<button id="back"><b><a href="index.php" class="link">Back</a></b></button>
@@ -71,6 +63,18 @@ if(isset($_POST["submit"])){
 		<button id="cancel"><b><a class="link" href="index.php">Cancel</a></b></button>
 	</div>
 </div>
+    <?php
+    if(isset($_POST["submit"])){
+        echo "<h1>done</h1>";
+        $_SESSION["NAME"] = $_POST["FullName"];
+        $_SESSION["NUMBER"] = $_POST["PhoneNumber"];
+        $_SESSION["EMAIL"] = $_POST["Email"];
+        $_SESSION["DESCRIPTION"] = $_POST["Summary"];
+        $_SESSION["ADDITIONALNOTES"] = $_POST["AdditionalInfo"];
+        header("location:Record.php");
+    } else {
+        echo mysqli_error($connect);
+    } ?>
 </form>
 </body>
 <footer>

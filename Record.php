@@ -37,9 +37,10 @@
             `		</div>
         <div id="btns">
             <button id="start"><b><a class="link" href="#h-recording">Start Recording</a></b></button>
-            <button id="stop"><b><a class="link" href="#stop">Stop Recording</a></b></button>
+            <button id="stop"><b><a class="link" href="#h-stop">Stop Recording</a></b></button>
         </div>
         <p id="h-recording">Recording Started</p>
+        <p id="h-stop">Recording Stopped</p>
     </div>
     <video id="myVidPlayer" muted autoplay>Webcam livestream</video>
     <script type="text/javascript">
@@ -57,7 +58,7 @@
 
     </script>
     <div>
-        <ul id="ul"></ul>
+        <ul id="ul" class="exc"></ul>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
