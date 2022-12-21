@@ -13,7 +13,7 @@ $_SESSION["MESSAGE"] = "";
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 	<meta name="keywords" content="WebRTC getUserMedia MediaRecorder API">
-	<link rel="stylesheet" href="Stylesheet.css">
+	<link rel="stylesheet" href="STYLE.css">
 </head>
 <body>
 <div>

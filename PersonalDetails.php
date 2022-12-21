@@ -7,29 +7,29 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 	<meta name="keywords" content="WebRTC getUserMedia MediaRecorder API">
-	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="STYLE.css">
 </head>
 <body>
 <div>
 	<h1>TNMOC Knowledge Booth Video Recorder</h1>
 	<h2>User Details</h2>
 </div>
-<form>
+<form method="POST">
 <table style="width: 100%">
 	<tr>
 		<th style="width: 46%">
 			<div id="about-you">
 				<h3>About You</h3>
 				<label>Name*:
-					<input type="text" class="text-box" name="FullName" required>
+					<input type="text" class="input-text-box" name="FullName" required>
 				</label>
 				<br><br>
 				<label>Email:
-					<input type="email" class="text-box" name="Email">
+					<input type="email" class="input-text-box" name="Email">
 				</label>
 				<br><br>
 				<label>Contact Phone Number:
-					<input type="tel" class="text-box" name="PhoneNumber">
+					<input type="tel" class="input-text-box" name="PhoneNumber">
 				</label>
 				<br><br>
                 <p><em>* required</em></p>
@@ -51,31 +51,21 @@
 		</th>
 	</tr>
 </table>
-<div id="bottom-menu">
-	<div id="next-button">
-		<button id="next" type="submit" value="submit"><b>Next</b></button>
-	</div>
-	<div id="back-button">
-        <br>
-		<b><a href="index.php" class="link">Back</a></b>
-	</div>
-	<div id="cancel-button">
-		<b><a class="link" href="index.php" style="position: center">Cancel</a></b>
-	</div>
+<div class="bottom-menu">
+	<button class="next-button" type="submit" value="Next" name="Next"><a class="link"><b>Next</b></a></button>
+	<button class="cancel-button"><b><a class="link" href="index.php">Cancel</a></b></button>
+	<button class="back-button"><b><a href="index.php" class="link">Back</a></b></button>
 </div>
 </form>
 <?php
-if(isset($_POST["submit"])){
-    echo "<h1>DEBUG#1</h1>";
+if(isset($_POST["Next"])){
     $_SESSION["NAME"] = $_POST["FullName"];
     $_SESSION["NUMBER"] = $_POST["PhoneNumber"];
     $_SESSION["EMAIL"] = $_POST["Email"];
     $_SESSION["DESCRIPTION"] = $_POST["Summary"];
     $_SESSION["ADDITIONALNOTES"] = $_POST["AdditionalInfo"];
-    echo "<h1>DEBUG #2</h1>";
-    header("location:Record.php");
+	header("location:Record.php");
 } else {
-    echo "<h1>DEBUG #3</h1>";
     echo mysqli_error($connect);
 } ?>
 </body>

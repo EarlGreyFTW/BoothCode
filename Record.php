@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="WebRTC getUserMedia MediaRecorder API">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="STYLE.css">
 </head>
 
 <body>
@@ -14,30 +14,36 @@
     <h1> TNMOC Knowledge Booth Video Recorder</h1>
     <div id="input-box">
         <div id="instructions">
-            <h2 id="instructions-heading">Instructions:</h2>
-            <ol id="instructions-text">
-                <li class="exc">Select Mode</li>
-                <li class="exc">Press 'Ready'</li>
-                <li class="exc">Press 'Start Recording'</li>
-                <li class="exc">Record your story</li>
-                <li class="exc">Press 'Stop Recording'</li>
-                <li class="exc">Press 'Please click here to save your story'</li>
-                <li class="exc">Press 'Next'</li>
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Select Mode</li>
+                <li>Press 'Ready'</li>
+                <li>Press 'Start Recording'</li>
+                <li>Record your story</li>
+                <li>Press 'Stop Recording'</li>
+                <li>Press 'Please click here to save your story'</li>
+                <li>Press 'Next'</li>
 
             </ol>
         </div>
         <div style="height:20px"></div>
         <div id="gUMArea">
-            <div> Mode:
-                <input type="radio" name="media" value="video" checked id="mediaVideo">Video & Audio Recording
-                <input type="radio" name="media" value="audio">Audio Only Recording
+            <div>
+	            <h3>Mode:</h3>
+	            <label>Video & Audio Recording
+                    <input type="radio" name="media" value="video" checked id="mediaVideo">
+	            </label>
+	            <br>
+	            <label>Audio Only Recording
+		            <input type="radio" name="media" value="audio">
+	            </label>
             </div>
             <div style="height:40px"></div>
-            <button onclick="" id="gUMbtn"><b>Ready</b></button>
+	        <button onclick="" id="gUMbtn"><a class="link"><b>Confirm</b></a></button>
             `		</div>
         <div id="btns">
-            <button id="start"><b><a class="link" href="#h-recording">Start Recording</a></b></button>
-            <button id="stop"><b><a class="link" href="#h-stop">Stop Recording</a></b></button>
+            <button id="start-button"><b><a class="link" href="#h-recording">Start Recording</a></b></button>
+            <button id="stop-button"><b><a class="link" href="#h-stop">Stop Recording</a></b></button>
         </div>
         <p id="h-recording">Recording Started</p>
         <p id="h-stop">Recording Stopped</p>
@@ -58,7 +64,7 @@
 
     </script>
     <div>
-        <ul id="ul" class="exc"></ul>
+        <ul id="ul"></ul>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -67,8 +73,8 @@
             id = val => document.getElementById(val),
             ul = id("ul"),
             gUMbtn = id("gUMbtn"),
-            start = id("start"),
-            stop = id("stop"),
+            start = id("start-button"),
+            stop = id("stop-button"),
             stream,
             recorder,
             counter=1,
@@ -140,17 +146,11 @@
 </div>
 </body>
 <footer>
-    <div id="bottom-menu">
-        <div id="next-button">
-            <button id="next"><b><a class="link" href="Summary.php">Next</a></b></button>
-        </div>
-        <div id="back-button">
-            <button id="back"><b><a href="PersonalDetails.php" class="link">Back</a></b></button>
-        </div>
-        <div id="cancel-button">
-            <button id="cancel"><b><a class="link" href="index.php">Cancel</a></b></button>
-        </div>
-    </div>
+    <div class="bottom-menu">
+	    <button class="next-button"><b><a class="link" href="Summary.php">Next</a></b></button>
+	    <button class="cancel-button"><b><a class="link" href="index.php">Cancel</a></b></button>
+	    <button class="back-button"><b><a href="index.php" class="link">Back</a></b></button>
+    </div
 </footer>
 </html>
 <!-- Made using MediaRecorder API and BootstrapCDN /-->

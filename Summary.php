@@ -6,14 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <meta name="keywords" content="WebRTC getUserMedia MediaRecorder API">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="STYLE.css">
 </head>
 <body>
 <div>
     <h1>TNMOC Knowledge Booth Video Recorder</h1>
     <h2>User Details</h2>
 </div>
-<form>
+<form method="POST">
     <div id="final-message">
         <h3>Anything Else</h3>
         <label>Anything else you would like to tell us? (Optional):
@@ -23,25 +23,18 @@
         <br><br>
     </div>
     <?php
-    if(isset($_POST["submit"])){
-        $name = $_SESSION["NAME"];
-        $number = $_SESSION["NUMBER"];
-        $email = $_SESSION["EMAIL"];
-        $description = $_SESSION["DESCRIPTION"];
-        $addnotes = $_SESSION["ADDITIONALNOTES"];
-        $message = $_POST["Message"];
+    if(isset($_POST["Next"])){
+        $name = mysqli_real_escape_string($connect, $_SESSION["NAME"]);
+        $number = mysqli_real_escape_string($connect, $_SESSION["NUMBER"]);
+        $email = mysqli_real_escape_string($connect, $_SESSION["EMAIL"]);
+        $description = mysqli_real_escape_string($connect, $_SESSION["DESCRIPTION"]);
+        $addnotes = mysqli_real_escape_string($connect, $_SESSION["ADDITIONALNOTES"]);
+        $message = mysqli_real_escape_string($connect, $_POST["Message"]);
         $upload = mysqli_query($connect, "INSERT INTO details (NAME, NUMBER, EMAIL, DESCRIPTION, ADDITIONALNOTES, MESSAGE) VALUES ('$name', '$number', '$email', '$description', '$addnotes', '$message')");
     } ?>
-    <div id="bottom-menu">
-        <div id="next-button">
-            <button id="next" type="submit" value="submit"><b>Done</b></button>
-        </div>
-        <div id="back-button">
-            <button id="back"><b><a href="Record.php" class="link">Back</a></b></button>
-        </div>
-        <div id="cancel-button">
-            <button id="cancel"><b><a class="link" href="index.php">Cancel</a></b></button>
-        </div>
+    <div class="bottom-menu">
+	    <button class="next-button" type="submit" value="Next" name="Next"><a class="link"><b>Next</b></a></button>	    <button class="cancel-button"><b><a class="link" href="index.php">Cancel</a></b></button>
+	    <button class="back-button"><b><a href="index.php" class="link">Back</a></b></button>
     </div>
 </form>
 </body>
