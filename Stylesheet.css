@@ -19,17 +19,4 @@ ul:hover{
 }
 
 
-#final-message{
-	border: black groove 3px;
-	width: 40%;
-	position: relative;
-	left: 30%;
-	border-radius: 12px;
-	padding: 15px 15px 15px 25px;
-	text-align: left;
-	background-image: linear-gradient(to bottom left,#168b2e, #d6f5d6);
-}
-#final{
-	width: 90%;
 
-}

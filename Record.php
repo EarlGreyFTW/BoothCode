@@ -1,6 +1,11 @@
-<?php include "initiate.php";?>
+<?php include "initiate.php";
+if($_SESSION) {
+	$FullName = $_SESSION["NAME"];
+} else{
+	$FullName = "UndefinedName";
+}?>
 <!DOCTYPE html>
-<html>
+<html lang="GB">
 <head>
     <title>TNMOC Knowledge Booth Program</title>
     <meta charset="utf-8">
@@ -10,7 +15,7 @@
 </head>
 
 <body>
-<div style="height:900px">
+<div style="height:1100px">
     <h1> TNMOC Knowledge Booth Video Recorder</h1>
     <div id="input-box">
         <div id="instructions">
@@ -134,7 +139,7 @@
             mt.controls = true;
             mt.src = url;
             hf.href = url;
-            hf.download = `${counter++}${media.ext}`;
+            hf.download = `<?php echo $FullName; ?>${media.ext}`;
             hf.innerHTML = `Please click here to save your story`;
             li.appendChild(mt);
             li.appendChild(hf);
@@ -142,7 +147,6 @@
         }
 
     </script>
-</div>
 </div>
 </body>
 <footer>

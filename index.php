@@ -7,7 +7,7 @@ $_SESSION["ADDITIONALNOTES"] = "";
 $_SESSION["MESSAGE"] = "";
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="GB">
 <head>
 	<title>TNMOC Knowledge Booth Program</title>
 	<meta charset="utf-8">

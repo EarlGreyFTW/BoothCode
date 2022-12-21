@@ -1,6 +1,6 @@
 <?php include "initiate.php"; ?>
 <!DOCTYPE html>
-<html>
+<html lang="GB">
 <head>
     <title>TNMOC Knowledge Booth Program</title>
     <meta charset="utf-8">
@@ -31,9 +31,11 @@
         $addnotes = mysqli_real_escape_string($connect, $_SESSION["ADDITIONALNOTES"]);
         $message = mysqli_real_escape_string($connect, $_POST["Message"]);
         $upload = mysqli_query($connect, "INSERT INTO details (NAME, NUMBER, EMAIL, DESCRIPTION, ADDITIONALNOTES, MESSAGE) VALUES ('$name', '$number', '$email', '$description', '$addnotes', '$message')");
-    } ?>
+        header("Location: index.php");
+	} ?>
     <div class="bottom-menu">
-	    <button class="next-button" type="submit" value="Next" name="Next"><a class="link"><b>Next</b></a></button>	    <button class="cancel-button"><b><a class="link" href="index.php">Cancel</a></b></button>
+	    <button class="next-button" type="submit" value="Next" name="Next"><a class="link"><b>Finish</b></a></button>
+	    <button class="cancel-button"><b><a class="link" href="index.php">Cancel</a></b></button>
 	    <button class="back-button"><b><a href="index.php" class="link">Back</a></b></button>
     </div>
 </form>
