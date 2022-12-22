@@ -1,4 +1,9 @@
 <?php include "initiate.php";
+$name = mysqli_real_escape_string($connect, $_SESSION["NAME"]);
+$number = mysqli_real_escape_string($connect, $_SESSION["NUMBER"]);
+$email = mysqli_real_escape_string($connect, $_SESSION["EMAIL"]);
+$description = mysqli_real_escape_string($connect, $_SESSION["DESCRIPTION"]);
+$addnotes = mysqli_real_escape_string($connect, $_SESSION["ADDITIONALNOTES"]);
 ?>
 <!DOCTYPE html>
 <html lang="GB">
@@ -21,15 +26,15 @@
 			<div id="about-you">
 				<h3>About You</h3>
 				<label>Name*:
-					<input type="text" class="input-text-box" name="FullName" required>
+					<input type="text" class="input-text-box" name="FullName" value="<?php echo $name; ?>" required>
 				</label>
 				<br><br>
 				<label>Email:
-					<input type="email" class="input-text-box" name="Email">
+					<input type="email" class="input-text-box" name="Email" value="<?php echo $email; ?>">
 				</label>
 				<br><br>
 				<label>Contact Phone Number:
-					<input type="tel" class="input-text-box" name="PhoneNumber">
+					<input type="tel" class="input-text-box" name="PhoneNumber" value="<?php echo $number; ?>">
 				</label>
 				<br><br>
                 <p><em>* required</em></p>
@@ -40,11 +45,11 @@
 			<div id="about-your-story">
 				<h3>About Your Story</h3>
 				<label>Please give one or two sentences summing up what you are going to tell us about (Optional):
-					<textarea rows="5" cols="55" name="Summary" placeholder="Enter text"></textarea>
+					<textarea rows="5" cols="55" name="Summary" placeholder="Enter text" ><?php echo $description; ?></textarea>
 				</label>
 				<br><br>
 				<label>Anything else you'd like to mention? (Optional):
-					<textarea rows="5" cols="55" name="AdditionalInfo" placeholder="Enter text"></textarea>
+					<textarea rows="5" cols="55" name="AdditionalInfo" placeholder="Enter text"><?php echo $addnotes; ?></textarea>
 				</label>
 				<br><br>
 			</div>
@@ -53,7 +58,7 @@
 </table>
 <div class="bottom-menu">
 	<button class="next-button" type="submit" value="Next" name="Next"><a class="link"><b>Next</b></a></button>
-	<button class="cancel-button"><b><a class="link" href="index.php">Cancel</a></b></button>
+	<button class="cancel-button"><b><a class="link" href="index.php">Start Again</a></b></button>
 	<button class="back-button"><b><a href="index.php" class="link">Back</a></b></button>
 </div>
 </form>

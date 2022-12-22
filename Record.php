@@ -139,8 +139,8 @@ if($_SESSION) {
             mt.controls = true;
             mt.src = url;
             hf.href = url;
-            hf.download = `<?php echo $FullName; ?>${media.ext}`;
-            hf.innerHTML = `Please click here to save your story`;
+            hf.download = `<?php echo mysqli_real_escape_string($connect, $FullName);?>${media.ext}`;
+            hf.innerHTML = `Please click here to save your story, or press Start Recording to try again.`;
             li.appendChild(mt);
             li.appendChild(hf);
             ul.appendChild(li);
@@ -152,8 +152,8 @@ if($_SESSION) {
 <footer>
     <div class="bottom-menu">
 	    <button class="next-button"><b><a class="link" href="Summary.php">Next</a></b></button>
-	    <button class="cancel-button"><b><a class="link" href="index.php">Cancel</a></b></button>
-	    <button class="back-button"><b><a href="index.php" class="link">Back</a></b></button>
+	    <button class="cancel-button"><b><a class="link" href="index.php">Start Again</a></b></button>
+	    <button class="back-button"><b><a href="PersonalDetails.php" class="link">Back</a></b></button>
     </div
 </footer>
 </html>
