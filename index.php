@@ -30,7 +30,7 @@ $_SESSION["MESSAGE"] = "";
 		</p>
 	</div>
 	<div id="begin-button">
-		<button id="begin"><b><a class="link" href="PersonalDetails.php" style="color: black; font-size: 34px">Tap Here To Begin.</a></b></button>
+		<button id="begin"><b><a class="link" href="PersonalDetails.php" style="color: black; font-size: 50px">Tap Here To Begin</a></b></button>
 	</div>
 </div>
 </body>

@@ -36,7 +36,7 @@
     <div class="bottom-menu">
 	    <button class="next-button" type="submit" value="Next" name="Next"><a class="link"><b>Finish</b></a></button>
 	    <button class="cancel-button"><b><a class="link" href="index.php">Cancel</a></b></button>
-	    <button class="back-button"><b><a href="index.php" class="link">Back</a></b></button>
+	    <button class="back-button"><b><a href="Record.php" class="link">Back</a></b></button>
     </div>
 </form>
 </body>
