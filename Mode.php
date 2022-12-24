@@ -12,15 +12,19 @@
 <body>
 <div>
 	<img src="TNMOC-Apple-Logo.png" class="logo" alt="logo">
-	<h1>TNMOC Knowledge Booth Video Recorder</h1>
-	<h2>Mode Selection</h2>
+	<div class="title">
+		<h1>TNMOC Knowledge Booth</h1>
+		<h2>Mode Selection</h2>
+	</div>
 </div>
 <div id="mode">
 	<br>
-	<h4>Select how you would like to record your story.</h4>
-	<button class="mode-button"><b><a class="link" href="RecordVideo.php">Audio and Video Recording</a></b></button>
-	<button class="mode-button"><b><a class="link" href="RecordAudio.php#not-recording">Audio Only Recording</a></b></button>
-</div>
+	<div class="title">
+		<h4>Select how you would like to record your story.</h4>
+		<button class="mode-button"><b><a class="link" href="RecordVideo.php" style="color: black">Audio and Video Recording</a></b></button>
+		<button class="mode-button"><b><a class="link" href="RecordAudio.php#not-recording" style="color: black">Audio Only Recording</a></b></button>
+	</div>
+	</div>
 <div class="bottom-menu">
 	<button class="cancel-button"><b><a class="link" href="index.php">Start Again</a></b></button>
 	<button class="back-button"><b><a href="PersonalDetails.php" class="link">Back</a></b></button>

@@ -19,15 +19,18 @@ $_SESSION["MESSAGE"] = "";
 <body>
 <div>
 	<img src="TNMOC-Apple-Logo.png" class="logo" alt="logo">
-	<h1>TNMOC Knowledge Booth Video Recorder</h1>
-	<h2>Homepage</h2>
+	<div class="title">
+		<h1>TNMOC Knowledge Booth</h1>
+		<h2>Homepage</h2>
+	</div>
+
 	<div id="about-text">
 		<h3>About this program</h3>
 		<p>
 			Welcome to the National Museum of Computing's Knowledge transfer booth. This system is to allow stories and memories of the history of computing to be conserved. We welcome stories and memories of anything computing, from your first expereince with computers to the highlight of your work with or on computers!
 			By pressing the button below you agree to the following terms:
 		</p>
-		<ol>
+		<ol style="text-align: left">
 			<li>This booth will store the personal information that you decide to share, for the purpose of adding to the collective knowledge available to museum users. It will not be shared in the public domain and the information will be securely stored within the TNMOC organisation. </li>
 			<li>You have the right to erase this information should you decide to do so in future. Please contact example@tnmoc.org should you wish to exercise that right.</li>
 			<li>The information that you consent to share by using this booth will otherwise be retained indefinitely.</li>

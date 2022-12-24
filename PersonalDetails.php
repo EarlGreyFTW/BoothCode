@@ -18,8 +18,10 @@ $addnotes = mysqli_real_escape_string($connect, $_SESSION["ADDITIONALNOTES"]);
 <body>
 <div>
 	<img src="TNMOC-Apple-Logo.png" class="logo" alt="logo">
-	<h1>TNMOC Knowledge Booth Video Recorder</h1>
-	<h2>User Details</h2>
+	<div class="title">
+		<h1>TNMOC Knowledge Booth</h1>
+		<h2>Personal Details</h2>
+	</div>
 </div>
 <form method="POST">
 <table style="width: 100%">

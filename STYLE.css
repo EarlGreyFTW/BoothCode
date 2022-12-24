@@ -7,6 +7,8 @@ body{
     text-align:center;
     color: black;
     height: available;
+    background-image: url("circuit.png");
+    background-size: contain;
 }
 h1{
     font-size: 50px;
@@ -27,8 +29,8 @@ p, label, li{
 textarea{
     font-size: 20px;
     border-radius: 12px;
-    border: black solid 1px;
-    background-image: linear-gradient(to bottom right,#168b2e, #d6f5d6);
+    border: #1F732A 3px solid;
+    background-color: white;
     margin: 5px;
 }
 button{
@@ -75,8 +77,8 @@ button:hover {
     height: 45px;
     font-size: 20px;
     border-radius: 12px;
-    border: black 1px solid;
-    background-image: linear-gradient(to bottom right,#168b2e, #d6f5d6);
+    border: #1F732A 3px solid;
+    background-color: white;
 }
 .bottom-menu{
     position: sticky;
@@ -86,6 +88,7 @@ button:hover {
     height: 100px;
     margin: 10px 10px 20px;
     padding: 5px;
+    border: #1F732A solid 5px;
 }
 .next-button{
     background-color: #168b2e;
@@ -115,16 +118,25 @@ button:hover {
     border: black 3px groove;
     padding: 10px;
 }
+.title{
+    background-color: white;
+    border-radius: 12px;
+    border: #1F732A solid 10px;
+    width: 60%;
+    left: 20%;
+    position: relative;
+    margin-bottom: 20px;
+}
 
 /* Index.php */
 #about-text{
     position: relative;
     left: 10%;
     width: 80%;
-    border: black groove 3px;
+    border: #1F732A solid 10px;
     border-radius: 12px;
-    background-image: linear-gradient(to bottom left,#168b2e, #d6f5d6);
     padding: 5px;
+    background-color: white;
 }
 #begin-button{
     position: relative;
@@ -135,25 +147,25 @@ button:hover {
 #begin{
     width: 100%;
     border-radius: 12px;
-    border: black groove 3px;
-    padding: 15px;
-    background-image: linear-gradient(to bottom left,#168b2e, #d6f5d6);
+    border: #1F732A solid 10px;
+    padding: 5px;
+    background-color: white;
 }
 
 /* PersonalDetails.php */
 #about-you{
-    border: black groove 3px;
+    border: #1F732A solid 10px;
     border-radius: 12px;
     padding: 15px 15px 15px 45px;
     text-align: left;
-    background-image: linear-gradient(to bottom left,#168b2e, #d6f5d6);
+    background-color: white;
 }
 #about-your-story{
-    border: black groove 3px;
+    border: #1F732A solid 10px;
     border-radius: 12px;
     padding: 15px 15px 15px 25px;
     text-align: left;
-    background-image: linear-gradient(to bottom left,#168b2e, #d6f5d6);
+    background-color: white;
 }
 /* Mode.php */
 #mode{
@@ -165,10 +177,9 @@ button:hover {
 /* RecordVideo.php, RecordAudio.php */
 #input-box{
     width: 40%;
-    border: black groove 3px;
-    float: left;
+    border: #1F732A solid 10px;
+    background-color: white;    float: left;
     border-radius: 12px;
-    background-image: linear-gradient(to bottom left,#168b2e, #d6f5d6);
 }
 #instructions{
     text-align: left;
@@ -177,16 +188,15 @@ button:hover {
     width: 50%;
 }
 #myVidPlayer{
-    border: #168b2e solid 5px;
+    border: #1F732A 10px solid;
     float: right;
     border-radius: 12px;
 }
 #status{
-    border: #168b2e solid 5px;
-    float: right;
+    border: #1F732A solid 10px;
+    background-color: white;    float: right;
     border-radius: 12px;
     padding: 20px;
-    background-image: linear-gradient(to bottom left,#168b2e, #d6f5d6);
 }
 #h-recording{
     color: red;
@@ -222,14 +232,15 @@ button:hover {
 
 /* Summary.php */
 #final-message{
-    border: black groove 3px;
+    border: #1F732A solid 10px;
     width: 40%;
     position: relative;
     left: 30%;
     border-radius: 12px;
     padding: 15px 15px 15px 25px;
+    margin-bottom: 25px;
     text-align: left;
-    background-image: linear-gradient(to bottom left,#168b2e, #d6f5d6);
+    background-color: white;
 }
 #final{
     width: 90%;

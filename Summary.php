@@ -12,8 +12,10 @@
 <body>
 <div>
 	<img src="TNMOC-Apple-Logo.png" class="logo" alt="logo">
-    <h1>TNMOC Knowledge Booth Video Recorder</h1>
-    <h2>User Details</h2>
+	<div class="title">
+		<h1>TNMOC Knowledge Booth</h1>
+		<h2>Summary</h2>
+	</div>
 </div>
 <form method="POST" onSubmit="return confirm('Are you sure you want to submit your story?');">
     <div id="final-message">

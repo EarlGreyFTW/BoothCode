@@ -18,7 +18,10 @@ if($_SESSION) {
 <body>
 <div style="height:1100px">
 	<img src="TNMOC-Apple-Logo.png" class="logo" alt="logo">
-    <h1> TNMOC Knowledge Booth Video Recorder</h1>
+	<div class="title">
+		<h1>TNMOC Knowledge Booth</h1>
+		<h2>Audio Recorder</h2>
+	</div>
     <div id="input-box">
         <div id="instructions">
             <h2>Instructions:</h2>
