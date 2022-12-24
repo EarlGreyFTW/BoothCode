@@ -21,13 +21,10 @@ if($_SESSION) {
         <div id="instructions">
             <h2>Instructions:</h2>
             <ol>
-                <li>Select Mode</li>
-                <li>Press 'Ready'</li>
                 <li>Press 'Start Recording'</li>
                 <li>Record your story</li>
                 <li>Press 'Stop Recording'</li>
-                <li>Press 'Please click here to save your story'</li>
-                <li>Press 'Next'</li>
+                <li>Press 'Next' to continue, or start again by pressing 'Start Recording'</li>
 
             </ol>
         </div>
@@ -36,24 +33,32 @@ if($_SESSION) {
             <div>
 	            <h3>Mode:</h3>
 	            <label>Video & Audio Recording
-                    <input type="radio" name="media" value="video" checked id="mediaVideo">
+                    <input type="radio" name="media" value="video">
 	            </label>
 	            <br>
 	            <label>Audio Only Recording
-		            <input type="radio" name="media" value="audio">
+		            <input type="radio" name="media" value="audio" checked id="mediaVideo">
 	            </label>
             </div>
             <div style="height:40px"></div>
-	        <button onclick="" id="gUMbtn"><a class="link"><b>Confirm</b></a></button>
+	        <button onclick="" id="gUMbtn" hidden><a class="link"><b>Confirm</b></a></button>
             `		</div>
+	    <script type="text/javascript">
+            window.onload = function(){
+                document.getElementById("gUMbtn").click();
+            }
+	    </script>
         <div id="btns">
             <button id="start-button"><b><a class="link" href="#h-recording">Start Recording</a></b></button>
             <button id="stop-button"><b><a class="link" href="#h-stop">Stop Recording</a></b></button>
         </div>
-        <p id="h-recording">Recording Started</p>
-        <p id="h-stop">Recording Stopped</p>
     </div>
-    <video id="myVidPlayer" muted autoplay>Webcam livestream</video>
+	<div id="status">
+		<p id="not-recording"><b>Not Recording</b></p>
+		<p id="h-recording"><b>Recording Started</b></p>
+		<p id="h-stop"><b>Recording Stopped</b></p>
+	</div>
+    <video id="myVidPlayer" muted autoplay hidden>Webcam livestream</video>
     <script type="text/javascript">
         const video = document.querySelector('#myVidPlayer');
         window.navigator.mediaDevices.getUserMedia({ video: true })
@@ -92,14 +97,14 @@ if($_SESSION) {
                 mediaOptions = {
                     video: {
                         tag: "video",
-                        type: "video/webm",
+                        type: "video/mp4",
                         ext: ".mp4",
-                        gUM: {video: true, audio: true}
+                        gUM: {audio: true}
                     },
                     audio: {
                         tag: "audio",
-                        type: "audio/ogg",
-                        ext: ".ogg",
+                        type: "audio/mp3",
+                        ext: ".mp3",
                         gUM: {audio: true}
                     }
                 };
@@ -139,21 +144,27 @@ if($_SESSION) {
             mt.controls = true;
             mt.src = url;
             hf.href = url;
+            hf.id = `media-download`;
             hf.download = `<?php echo mysqli_real_escape_string($connect, $FullName);?>${media.ext}`;
-            hf.innerHTML = `Please click here to save your story, or press Start Recording to try again.`;
+            hf.innerHTML = ``;
             li.appendChild(mt);
             li.appendChild(hf);
             ul.appendChild(li);
         }
-
     </script>
 </div>
 </body>
 <footer>
     <div class="bottom-menu">
-	    <button class="next-button"><b><a class="link" href="Summary.php">Next</a></b></button>
+	    <button class="next-button" onclick="download()"><b>Next</b></button>
+	    <script type="text/javascript">
+            function download(){
+                document.getElementById("media-download").click();
+                window.location.replace("Summary.php");
+            }
+	    </script>
 	    <button class="cancel-button"><b><a class="link" href="index.php">Start Again</a></b></button>
-	    <button class="back-button"><b><a href="PersonalDetails.php" class="link">Back</a></b></button>
+	    <button class="back-button"><b><a href="Mode.php" class="link">Back</a></b></button>
     </div
 </footer>
 </html>

@@ -18,6 +18,9 @@ h3{
     font-size: 40px;
     text-decoration: black solid 3px underline
 }
+h4{
+    font-size: 30px;
+}
 p, label, li{
     font-size: 25px;
 }
@@ -53,6 +56,10 @@ button:hover {
     font-style: oblique;
 }
 #h-stop:target{
+    font-size: 25px;
+    font-style: oblique;
+}
+#not-recording:target{
     font-size: 25px;
     font-style: oblique;
 }
@@ -94,6 +101,15 @@ button:hover {
     height: 90px;
     font-size: 30px;
 }
+.mode-button{
+    width: 50%;
+    margin-bottom: 5%;
+    position: relative;
+    background-image: linear-gradient(to bottom right,#168b2e, #d6f5d6);
+    border-radius: 12px;
+    border: black 3px groove;
+    padding: 10px;
+}
 
 /* Index.php */
 #about-text{
@@ -134,8 +150,14 @@ button:hover {
     text-align: left;
     background-image: linear-gradient(to bottom left,#168b2e, #d6f5d6);
 }
+/* Mode.php */
+#mode{
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
 
-/* Record.php */
+/* RecordVideo.php, RecordAudio.php */
 #input-box{
     width: 40%;
     border: black groove 3px;
@@ -154,6 +176,13 @@ button:hover {
     float: right;
     border-radius: 12px;
 }
+#status{
+    border: #168b2e solid 5px;
+    float: right;
+    border-radius: 12px;
+    padding: 20px;
+    background-image: linear-gradient(to bottom left,#168b2e, #d6f5d6);
+}
 #h-recording{
     color: red;
     font-size: 0;
@@ -164,6 +193,9 @@ button:hover {
 }
 #mediaVideo{
     position: relative;
+}
+#not-recording{
+    font-size: 0;
 }
 #start-button{
     background-color: #168b2e;

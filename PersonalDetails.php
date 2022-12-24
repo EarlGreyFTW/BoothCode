@@ -69,7 +69,7 @@ if(isset($_POST["Next"])){
     $_SESSION["EMAIL"] = $_POST["Email"];
     $_SESSION["DESCRIPTION"] = $_POST["Summary"];
     $_SESSION["ADDITIONALNOTES"] = $_POST["AdditionalInfo"];
-	header("location:Record.php");
+	header("location:Mode.php");
 } else {
     echo mysqli_error($connect);
 } ?>
