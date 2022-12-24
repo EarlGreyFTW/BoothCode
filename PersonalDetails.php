@@ -13,9 +13,11 @@ $addnotes = mysqli_real_escape_string($connect, $_SESSION["ADDITIONALNOTES"]);
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 	<meta name="keywords" content="WebRTC getUserMedia MediaRecorder API">
 	<link rel="stylesheet" href="STYLE.css">
+	<link rel="icon" type="image/x-icon" href="TNMOC-Apple-Logo.png">
 </head>
 <body>
 <div>
+	<img src="TNMOC-Apple-Logo.png" class="logo" alt="logo">
 	<h1>TNMOC Knowledge Booth Video Recorder</h1>
 	<h2>User Details</h2>
 </div>

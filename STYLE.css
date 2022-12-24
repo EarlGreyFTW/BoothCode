@@ -65,6 +65,11 @@ button:hover {
 }
 
 /* CLASSES */
+.logo{
+    width: 128px;
+    height: 132px;
+    float: left;
+}
 .input-text-box{
     width: 300px;
     height: 45px;

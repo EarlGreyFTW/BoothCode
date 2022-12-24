@@ -7,9 +7,11 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 	<meta name="keywords" content="WebRTC getUserMedia MediaRecorder API">
 	<link rel="stylesheet" href="STYLE.css">
+	<link rel="icon" type="image/x-icon" href="TNMOC-Apple-Logo.png">
 </head>
 <body>
 <div>
+	<img src="TNMOC-Apple-Logo.png" class="logo" alt="logo">
 	<h1>TNMOC Knowledge Booth Video Recorder</h1>
 	<h2>Mode Selection</h2>
 </div>
@@ -20,7 +22,6 @@
 	<button class="mode-button"><b><a class="link" href="RecordAudio.php#not-recording">Audio Only Recording</a></b></button>
 </div>
 <div class="bottom-menu">
-	<button class="next-button" disabled><a class="link"><b>Next</b></a></button>
 	<button class="cancel-button"><b><a class="link" href="index.php">Start Again</a></b></button>
 	<button class="back-button"><b><a href="PersonalDetails.php" class="link">Back</a></b></button>
 </div>

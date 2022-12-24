@@ -12,10 +12,12 @@ if($_SESSION) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="WebRTC getUserMedia MediaRecorder API">
     <link rel="stylesheet" href="STYLE.css">
+	<link rel="icon" type="image/x-icon" href="TNMOC-Apple-Logo.png">
 </head>
 
 <body>
 <div style="height:1100px">
+	<img src="TNMOC-Apple-Logo.png" class="logo" alt="logo">
     <h1> TNMOC Knowledge Booth Video Recorder</h1>
     <div id="input-box">
         <div id="instructions">
@@ -153,7 +155,7 @@ if($_SESSION) {
 </body>
 <footer>
     <div class="bottom-menu">
-	    <button class="next-button" onclick="download()"><b>Next</b></button>
+	    <button class="next-button" onclick="download()" style="font-size: 30px;"><b>Next</b></button>
 	    <script type="text/javascript">
             function download(){
                 document.getElementById("media-download").click();
