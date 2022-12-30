@@ -1,9 +1,11 @@
 <?php include "initiate.php";
 if($_SESSION) {
 	$FullName = $_SESSION["NAME"];
-} else{
+} else {
 	$FullName = "UndefinedName";
-}?>
+}
+$_SESSION["MODE"] = "V";
+?>
 <!DOCTYPE html>
 <html lang="GB">
 <head>

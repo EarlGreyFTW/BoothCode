@@ -3,7 +3,9 @@ if($_SESSION) {
 	$FullName = $_SESSION["NAME"];
 } else{
 	$FullName = "UndefinedName";
-}?>
+}
+$_SESSION["MODE"] = "A";
+?>
 <!DOCTYPE html>
 <html lang="GB">
 <head>

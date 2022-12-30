@@ -34,7 +34,8 @@
         $description = mysqli_real_escape_string($connect, $_SESSION["DESCRIPTION"]);
         $addnotes = mysqli_real_escape_string($connect, $_SESSION["ADDITIONALNOTES"]);
         $message = mysqli_real_escape_string($connect, $_POST["Message"]);
-        $upload = mysqli_query($connect, "INSERT INTO details (NAME, NUMBER, EMAIL, DESCRIPTION, ADDITIONALNOTES, MESSAGE) VALUES ('$name', '$number', '$email', '$description', '$addnotes', '$message')");
+		$mode = $_SESSION["MODE"];
+        $upload = mysqli_query($connect, "INSERT INTO details (NAME, NUMBER, EMAIL, DESCRIPTION, ADDITIONALNOTES, MODE, MESSAGE) VALUES ('$name', '$number', '$email', '$description', '$addnotes', '$mode', '$message')");
         header("Location: index.php");
 	} ?>
     <div class="bottom-menu">

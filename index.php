@@ -4,6 +4,7 @@ $_SESSION["NUMBER"] = "";
 $_SESSION["EMAIL"] = "";
 $_SESSION["DESCRIPTION"] = "";
 $_SESSION["ADDITIONALNOTES"] = "";
+$_SESSION["MODE"] = "";
 $_SESSION["MESSAGE"] = "";
 ?>
 <!DOCTYPE html>
@@ -34,7 +35,7 @@ $_SESSION["MESSAGE"] = "";
 			<li>This booth will store the personal information that you decide to share, for the purpose of adding to the collective knowledge available to museum users. It will not be shared in the public domain and the information will be securely stored within the TNMOC organisation. </li>
 			<li>You have the right to erase this information should you decide to do so in future. Please contact example@tnmoc.org should you wish to exercise that right.</li>
 			<li>The information that you consent to share by using this booth will otherwise be retained indefinitely.</li>
-			<li>You have the right to access the information that is stored at any time, please contact example@tnmoc.org</li>
+			<li>You have the right to access the information that is stored at any time, please contact example@tnmoc.org</li></ol>
 			<p>
 				You are free to cancel your session at any point by pressing the cancel button at the bottom of the screen. This will delete all of your data stored so far.
 			</p>
