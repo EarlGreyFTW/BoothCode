@@ -24,7 +24,7 @@
 		<button class="mode-button"><b><a class="link" href="RecordVideo.php" style="color: black">Audio and Video Recording</a></b></button>
 		<button class="mode-button"><b><a class="link" href="RecordAudio.php#not-recording" style="color: black">Audio Only Recording</a></b></button>
 	</div>
-	</div>
+</div>
 <div class="bottom-menu">
 	<button class="cancel-button"><b><a class="link" href="index.php">Start Again</a></b></button>
 	<button class="back-button"><b><a href="PersonalDetails.php" class="link">Back</a></b></button>
