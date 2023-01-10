@@ -54,12 +54,10 @@ button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 #h-recording:target{
-    font-size: 25px;
-    font-style: oblique;
+    visibility: visible;
 }
 #h-stop:target{
-    font-size: 25px;
-    font-style: oblique;
+    display: none;
 }
 #not-recording:target{
     font-size: 25px;
@@ -81,7 +79,8 @@ button:hover {
     background-color: white;
 }
 .bottom-menu{
-    position: sticky;
+    position: fixed;
+    width: 90%;
     bottom: 0;
     background: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -206,14 +205,15 @@ button:hover {
 }
 #h-recording{
     color: red;
-    font-size: 0;
+    font-size: 25px;
+    font-style: oblique;
+    visibility: hidden;
 }
-#h-stop{
-    color: red;
-    font-size: 0;
-}
+
 #mediaVideo{
     position: relative;
+    left: 65%;
+    top: 5%;
 }
 #not-recording{
     font-size: 0;

@@ -1,6 +1,7 @@
 <?php include "initiate.php";
 $_SESSION["NAME"] = "";
 $_SESSION["NUMBER"] = "";
+$_SESSION["HASH"] = "";
 $_SESSION["EMAIL"] = "";
 $_SESSION["DESCRIPTION"] = "";
 $_SESSION["ADDITIONALNOTES"] = "";

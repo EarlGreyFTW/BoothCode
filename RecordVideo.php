@@ -5,6 +5,8 @@ if($_SESSION) {
 	$FullName = "UndefinedName";
 }
 $_SESSION["MODE"] = "V";
+$_SESSION["HASH"] = uniqid();
+$hash = $_SESSION["HASH"];
 ?>
 <!DOCTYPE html>
 <html lang="GB">
@@ -31,7 +33,7 @@ $_SESSION["MODE"] = "V";
 	            <li>Press 'Start Recording'</li>
 	            <li>Record your story</li>
 	            <li>Press 'Stop Recording'</li>
-	            <li>Press 'Next' to continue, or start again by pressing 'Start Recording'</li>
+	            <li>Press 'Next' to continue, or try again by pressing 'Start Recording'<br> (please note only the most recent recording will be saved)</li>
             </ol>
         </div>
         <div style="height:20px"></div>
@@ -58,10 +60,11 @@ $_SESSION["MODE"] = "V";
             <button id="start-button"><b><a class="link" href="#h-recording">Start Recording</a></b></button>
             <button id="stop-button"><b><a class="link" href="#h-stop">Stop Recording</a></b></button>
         </div>
-        <p id="h-recording">Recording Started</p>
-        <p id="h-stop">Recording Stopped</p>
+        <p id="h-recording"><b>Recording!</b></p>
     </div>
-    <video id="myVidPlayer" muted autoplay>Webcam livestream</video>
+    <div id="h-stop">
+        <video id="myVidPlayer" muted autoplay>Webcam livestream</video>
+    </div>
     <script type="text/javascript">
         const video = document.querySelector('#myVidPlayer');
         window.navigator.mediaDevices.getUserMedia({ video: true })
@@ -148,7 +151,7 @@ $_SESSION["MODE"] = "V";
             mt.src = url;
             hf.href = url;
             hf.id = `media-download`;
-            hf.download = `<?php echo mysqli_real_escape_string($connect, $FullName);?>${media.ext}`;
+            hf.download = `<?php echo $hash;?>${media.ext}`;
             hf.innerHTML = ``;
             li.appendChild(mt);
             li.appendChild(hf);

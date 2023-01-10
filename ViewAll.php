@@ -45,14 +45,14 @@
 			# find media file based off name
 			if($row["MODE"] == "V"){
 				echo "<video width='320' height='240' controls>";
-				echo "<source src='" . "BoothMedia/" . $row["NAME"] . ".webm" . "' type='video/webm'>";
+				echo "<source src='" . "BoothMedia/" . $row["HASH"] . ".webm" . "' type='video/webm'>";
 				echo "</video>";
 			} else {
 				echo "<audio controls>";
-				echo "<source src='" . "BoothMedia/" . $row["NAME"] . ".mp3" . "' type='audio/mp4'>";
+				echo "<source src='" . "BoothMedia/" . $row["HASH"] . ".mp3" . "' type='audio/mp4'>";
 				echo "</audio>";
 			}
-			echo"</td>";
+			echo "</td>";
 			echo "<td>" . $row["MESSAGE"] . "</td>";
 		}
 	}

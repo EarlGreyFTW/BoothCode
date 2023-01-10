@@ -5,6 +5,8 @@ if($_SESSION) {
 	$FullName = "UndefinedName";
 }
 $_SESSION["MODE"] = "A";
+$_SESSION["HASH"] = uniqid();
+$hash = $_SESSION["HASH"];
 ?>
 <!DOCTYPE html>
 <html lang="GB">
@@ -152,7 +154,7 @@ $_SESSION["MODE"] = "A";
             mt.src = url;
             hf.href = url;
             hf.id = `media-download`;
-            hf.download = `<?php echo mysqli_real_escape_string($connect, $FullName);?>${media.ext}`;
+            hf.download = `<?php echo $hash;?>${media.ext}`;
             hf.innerHTML = ``;
             li.appendChild(mt);
             li.appendChild(hf);
