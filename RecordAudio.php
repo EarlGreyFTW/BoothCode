@@ -64,12 +64,11 @@ $hash = $_SESSION["HASH"];
     </div>
 	<div id="status">
 		<p id="not-recording"><b>Not Recording</b></p>
-		<p id="h-recording"><b>Recording Started</b></p>
-		<p id="h-stop"><b>Recording Stopped</b></p>
+		<p id="h-recording"><b>Recording</b></p>
 	</div>
     <video id="myVidPlayer" muted autoplay hidden>Webcam livestream</video>
     <script type="text/javascript">
-        const video = document.querySelector('#myVidPlayer');
+        const video = document.querySelector("#myVidPlayer");
         window.navigator.mediaDevices.getUserMedia({ video: true })
             .then(stream => {
                 video.srcObject = stream;

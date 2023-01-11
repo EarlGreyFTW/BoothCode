@@ -49,7 +49,7 @@
 				echo "</video>";
 			} else {
 				echo "<audio controls>";
-				echo "<source src='" . "BoothMedia/" . $row["HASH"] . ".mp3" . "' type='audio/mp4'>";
+				echo "<source src='" . "BoothMedia/" . $row["HASH"] . ".mp4" . "' type='audio/mp4'>";
 				echo "</audio>";
 			}
 			echo "</td>";
