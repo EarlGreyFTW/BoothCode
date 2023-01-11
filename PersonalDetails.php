@@ -52,9 +52,6 @@ $addnotes = mysqli_real_escape_string($connect, $_SESSION["ADDITIONALNOTES"]);
 					<textarea rows="5" cols="55" name="Summary" placeholder="Enter text" ><?php echo $description; ?></textarea>
 				</label>
 				<br><br>
-				<label>Anything else you'd like to mention? (Optional):
-					<textarea rows="5" cols="55" name="AdditionalInfo" placeholder="Enter text"><?php echo $addnotes; ?></textarea>
-				</label>
 				<br><br>
 			</div>
 		</th>
@@ -72,7 +69,6 @@ if(isset($_POST["Next"])){
     $_SESSION["NUMBER"] = $_POST["PhoneNumber"];
     $_SESSION["EMAIL"] = $_POST["Email"];
     $_SESSION["DESCRIPTION"] = $_POST["Summary"];
-    $_SESSION["ADDITIONALNOTES"] = $_POST["AdditionalInfo"];
 	header("location:Mode.php");
 } else {
     echo mysqli_error($connect);

@@ -40,7 +40,6 @@
 			echo "<td>" . $row["NUMBER"] . "</td>";
 			echo "<td>" . $row["EMAIL"] . "</td>";
 			echo "<td>" . $row["DESCRIPTION"] . "</td>";
-			echo "<td>" . $row["ADDITIONALNOTES"] . "</td>";
 			echo "<td>";
 			# find media file based off name
 			if($row["MODE"] == "V"){

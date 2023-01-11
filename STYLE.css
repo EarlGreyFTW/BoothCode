@@ -7,8 +7,7 @@ body{
     text-align:center;
     color: black;
     height: available;
-    background-color: floralwhite;
-    background-size: contain;
+    background-image: url("bg.jpg");
 }
 h1{
     font-size: 50px;
@@ -62,6 +61,9 @@ button:hover {
 #not-recording:target{
     font-size: 25px;
     font-style: oblique;
+}
+#t-c:target{
+    display: block;
 }
 
 /* CLASSES */
@@ -152,6 +154,10 @@ button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     padding: 5px;
     background-color: white;
+}
+
+#t-c{
+    display: none;
 }
 
 /* PersonalDetails.php */
@@ -284,4 +290,14 @@ button:hover {
 
 #description{
     width: 20%;
+}
+
+/*Review*/
+#review{
+    background-color: white;
+    border: #1F732A solid 10px;
+    border-radius: 20px;
+    width: 95%;
+    position: relative;
+    left: 2.5%;
 }

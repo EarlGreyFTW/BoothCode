@@ -32,14 +32,14 @@ $_SESSION["MESSAGE"] = "";
 			Welcome to the National Museum of Computing's Knowledge transfer booth. This system is to allow stories and memories of the history of computing to be conserved. We welcome stories and memories of anything computing, from your first expereince with computers to the highlight of your work with or on computers!
 			By pressing the button below you agree to the following terms:
 		</p>
-		<ol style="text-align: left">
+        <p style="text-underline: black"><b><a style="color: #1F732A" href="#t-c">Terms and Conditions</a></b></p>
+		<ol id="t-c" style="text-align: left">
 			<li>This booth will store the personal information that you decide to share, for the purpose of adding to the collective knowledge available to museum users. It will not be shared in the public domain and the information will be securely stored within the TNMOC organisation. </li>
 			<li>You have the right to erase this information should you decide to do so in future. Please contact example@tnmoc.org should you wish to exercise that right.</li>
 			<li>The information that you consent to share by using this booth will otherwise be retained indefinitely.</li>
-			<li>You have the right to access the information that is stored at any time, please contact example@tnmoc.org</li></ol>
-			<p>
-				You are free to cancel your session at any point by pressing the cancel button at the bottom of the screen. This will delete all of your data stored so far.
-			</p>
+			<li>You have the right to access the information that is stored at any time, please contact example@tnmoc.org</li>
+        </ol>
+        <p>You are free to cancel your session at any point by pressing the cancel button at the bottom of the screen. This will delete all of your data stored so far.</p>
 	</div>
 	<div id="begin-button">
 		<button id="begin"><b><a class="link" href="PersonalDetails.php" style="color: black; font-size: 50px">Tap Here To Begin</a></b></button>
